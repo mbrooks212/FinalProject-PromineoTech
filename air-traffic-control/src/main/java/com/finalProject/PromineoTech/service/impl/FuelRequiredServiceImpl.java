@@ -29,7 +29,6 @@ public class FuelRequiredServiceImpl implements FuelRequiredService{
 
   @Override
   public FuelRequired saveFuelRequired(FuelRequired fuelRequired) {
-    
     return fuelRequiredRepository.save(fuelRequired);
   }
 
