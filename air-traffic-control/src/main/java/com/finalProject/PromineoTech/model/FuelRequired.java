@@ -23,9 +23,10 @@ public class FuelRequired {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int fuel_id;
+    private int id;
     
+  @Column(value = "model")
+  private int model;
   @Column(value = "amount_of_fuel")
   private String amount_of_fuel;
-    
 }

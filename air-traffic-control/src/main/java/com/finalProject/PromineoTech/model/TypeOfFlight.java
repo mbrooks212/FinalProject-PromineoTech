@@ -22,11 +22,14 @@ public class TypeOfFlight {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-      private int flight_id;
+      private int id;
       
-//    @Column(value = "flight_id")
-//     private int flight_id;
-      
+    @Column(value = "airport")
+     private int airport;
+    @Column(value = "airline")
+    private int airline;
+    @Column(value = "flight")
+    private int flight;
   }
  
   
