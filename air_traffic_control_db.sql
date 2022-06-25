@@ -1,26 +1,43 @@
+DROP DATABASE IF EXISTS air_traffic_control;
 CREATE DATABASE air_traffic_control;
 use air_traffic_control;
 CREATE TABLE airports(
-airport_id INT NOT NULL AUTO_INCREMENT,
-PRIMARY KEY (airport_id)
+id INT NOT NULL AUTO_INCREMENT,
+airport_name VARCHAR(50) NOT NULL,
+PRIMARY KEY (id)
 );
 CREATE TABLE airlines(
-airline_id INT NOT NULL AUTO_INCREMENT,
-PRIMARY KEY (airline_id)
+id INT NOT NULL AUTO_INCREMENT,
+airline_name VARCHAR(50) NOT NULL,
+PRIMARY KEY (id)
 );
 CREATE TABLE plane_models(
 model_id INT NOT NULL AUTO_INCREMENT,
+model_name VARCHAR(50) NOT NULL,
 PRIMARY KEY (model_id)
 );
-CREATE TABLE passengers(
-passsenger_id INT NOT NULL AUTO_INCREMENT,
-PRIMARY KEY(passsenger_id)
-);
 CREATE TABLE flights(
-flight_id INT NOT NULL AUTO_INCREMENT,
-date_of_flight VARCHAR(30),
-time_if_flight VARCHAR(20),
-PRIMARY KEY(flight_id)
+id INT NOT NULL AUTO_INCREMENT,
+date DATE NOT NULL,
+time TIME NOT NULL,
+airports_id int NOT NULL,
+airlines_id int NOT NULL,
+PRIMARY KEY(id),
+foreign key(airports_id) references airports(id),
+foreign key(airlines_id) references airlines(id)
+);
+CREATE TABLE passengers(
+id INT NOT NULL AUTO_INCREMENT,
+first_name varchar(20) NOT NULL,
+last_name varchar(20) NOT NULL,
+dob DATE NOT NULL,
+airports_id int NOT NULL,
+airlines_id int NOT NULL,
+flights_id int ,
+PRIMARY KEY(id),
+FOREIGN KEY(airports_id) REFERENCES airports(id),
+FOREIGN KEY(airlines_id) REFERENCES airlines(id),
+FOREIGN KEY(flights_id) REFERENCES flights(id)
 );
 CREATE TABLE fuel_required(
 fuel_id INT NOT NULL,
