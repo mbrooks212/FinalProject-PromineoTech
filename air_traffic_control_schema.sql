@@ -25,13 +25,11 @@ last_name varchar(20) NOT NULL,
 dob DATE NOT NULL,
 airports_id int NOT NULL,
 airlines_id int NOT NULL,
-flights_date DATE NOT NULL,
-flights_time TIME NOT NULL,
+flights_id int (6),
 PRIMARY KEY(id),
 foreign key(airports_id) references airports(id),
 foreign key(airlines_id) references airlines(id),
-foreign key(flights_date) references flights(date),
-foreign key(flights_time) references flights(time)
+foreign key(flights_id) references flights(id)
 
 );
 CREATE TABLE flights(
