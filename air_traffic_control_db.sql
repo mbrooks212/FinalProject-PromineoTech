@@ -40,11 +40,19 @@ FOREIGN KEY(airlines_id) REFERENCES airlines(id),
 FOREIGN KEY(flights_id) REFERENCES flights(id)
 );
 CREATE TABLE fuel_required(
-fuel_id INT NOT NULL,
-amount_of_fuel VARCHAR(20) NOT NULL,
-PRIMARY KEY(fuel_id)
+id INT NOT NULL,
+model INT NOT NULL,
+amount_of_fuel INT NOT NULL,
+PRIMARY KEY(id),
+FOREIGN KEY(model) REFERENCES plane_models(model_id)
 );
 CREATE TABLE type_of_flight(
-flight_id INT NOT NULL,
-PRIMARY KEY(flight_id)
+id INT NOT NULL,
+airport INT NOT NULL,
+airline INT NOT NULL,
+flight INT NOT NULL,
+PRIMARY KEY(id),
+FOREIGN KEY(airport) REFERENCES airports(id),
+FOREIGN KEY(airline) REFERENCES airlines(id),
+FOREIGN KEY(flight) REFERENCES flights(id)
 );
