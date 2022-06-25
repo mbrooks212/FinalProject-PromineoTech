@@ -12,7 +12,7 @@ INSERT INTO airports (airport_name) VALUES ('ORD');
 
 -- airlines
 INSERT INTO airlines (airline_name) VALUES ('American Airlines');
-INSERT INTO airlines (airline_name) VALUES ('Delta AirLines');
+INSERT INTO airlines (airline_name) VALUES ('Delta Airlines');
 INSERT INTO airlines (airline_name) VALUES ('Frontier Airlines');
 INSERT INTO airlines (airline_name) VALUES ('Southwest Airlines');
 INSERT INTO airlines (airline_name) VALUES ('JetBlue');
@@ -34,11 +34,11 @@ INSERT INTO plane_models (model_name) VALUES ('Airbus A380');
 INSERT INTO passengers (first_name, last_name, dob,airports_id, airlines_id) VALUES ('Jane', 'Doe', '1995-02-01',2, 2);
 INSERT INTO passengers (first_name, last_name, dob,airports_id, airlines_id) VALUES ('Maddie', 'Jones', '1990-04-21',1, 3);
 INSERT INTO passengers (first_name, last_name, dob,airports_id, airlines_id) VALUES ('Jacob', 'Smith', '1982-06-01',8, 8);
-INSERT INTO passengers (first_name, last_name, dob,airports_id, airlines_id) VALUES ('Dominic', 'Crawford', '1997-03-22',7, 1);
-INSERT INTO passengers (first_name, last_name, dob,airports_id, airlines_id) VALUES ('Patricia', 'Jack', '1964-07-05',4, 4);
-INSERT INTO passengers (first_name, last_name, dob,airports_id, airlines_id) VALUES ('Benjamin', 'Stanford', '1954-12-12',3, 6);
-INSERT INTO passengers (first_name, last_name, dob,airports_id, airlines_id) VALUES ('Lawrence', 'Peters', '1945-03-07',6, 7);
-INSERT INTO passengers (first_name, last_name, dob,airports_id, airlines_id) VALUES ('Matt', 'Graven', '1992-11-01',5, 5);
+INSERT INTO passengers (first_name, last_name, dob,airports_id, airlines_id) VALUES ('Dominic', 'Crawford', '1997-03-22',7, 6);
+INSERT INTO passengers (first_name, last_name, dob,airports_id, airlines_id) VALUES ('Patricia', 'Jack', '1964-07-05',4, 5);
+INSERT INTO passengers (first_name, last_name, dob,airports_id, airlines_id) VALUES ('Benjamin', 'Stanford', '1954-12-12',3, 7);
+INSERT INTO passengers (first_name, last_name, dob,airports_id, airlines_id) VALUES ('Lawrence', 'Peters', '1945-03-07',6, 5);
+INSERT INTO passengers (first_name, last_name, dob,airports_id, airlines_id) VALUES ('Matt', 'Graven', '1992-11-01',5, 4);
 
 -- flights
 INSERT INTO flights (date, time, airports_id, airlines_id) VALUES ('2022-05-18', '06:30:00', 1,1);

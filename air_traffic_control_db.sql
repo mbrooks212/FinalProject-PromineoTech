@@ -1,3 +1,4 @@
+
 DROP DATABASE IF EXISTS air_traffic_control;
 CREATE DATABASE air_traffic_control;
 use air_traffic_control;
@@ -12,9 +13,9 @@ airline_name VARCHAR(50) NOT NULL,
 PRIMARY KEY (id)
 );
 CREATE TABLE plane_models(
-model_id INT NOT NULL AUTO_INCREMENT,
+id INT NOT NULL AUTO_INCREMENT,
 model_name VARCHAR(50) NOT NULL,
-PRIMARY KEY (model_id)
+PRIMARY KEY (id)
 );
 CREATE TABLE flights(
 id INT NOT NULL AUTO_INCREMENT,
@@ -44,7 +45,7 @@ id INT NOT NULL,
 model INT NOT NULL,
 amount_of_fuel INT NOT NULL,
 PRIMARY KEY(id),
-FOREIGN KEY(model) REFERENCES plane_models(model_id)
+FOREIGN KEY(model) REFERENCES plane_models(id)
 );
 CREATE TABLE type_of_flight(
 id INT NOT NULL,
