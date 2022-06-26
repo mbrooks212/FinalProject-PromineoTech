@@ -2,7 +2,7 @@ package com.finalProject.service;
 
 import java.util.List;
 import com.finalProject.model.Flights;
-
+//Mariah Jemmings
 public interface FlightsService {
   
   Flights saveFlight (Flights flight);
